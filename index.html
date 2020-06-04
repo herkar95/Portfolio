@@ -84,13 +84,6 @@
               class="nav-item nav-link"
               data-toggle="collapse"
               data-target=".navbar-collapse.show"
-              href="#experience"
-              >Experience</a
-            >
-            <a
-              class="nav-item nav-link"
-              data-toggle="collapse"
-              data-target=".navbar-collapse.show"
               href="#projects"
               >Projects</a
             >
@@ -148,6 +141,13 @@
                   <i class="lnr lnr-home" title="Residence"></i> Karlstad,
                   Sweden
                 </li>
+                <li>
+                  <i
+                    class="lnr lnr-graduation-hat"
+                    title="Graduation (Aug 2020)"
+                  ></i>
+                  Web Developer, KAU
+                </li>
               </ul>
               <div id="intro-socials" class="text-center">
                 <a
@@ -182,13 +182,21 @@
                 Hi. My name is Herman and I'm 24 years old. I am currently
                 studying my last semester at Karlstad university, where I'm
                 studying web development. I've always enjoyed math and problem
-                solving, and I'm always looking to learn new things!
+                solving, and I'm always looking to learn new things! As for my
+                next project, I'm going to check out Vue.js - while also getting
+                better at React.
               </p>
             </div>
             <div class="col-12 col-md-6 skills">
               <h2>A bit of what I know</h2>
               <div class="exp-item">
-                <span>HTML5/CSS3 - <b>6/10</b></span>
+                <span>HTML5/CSS3 - <b>7/10</b></span>
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </div>
+              <div class="exp-item">
+                <span>JavaScript - <b>8/10</b></span>
                 <div class="progress">
                   <div class="progress-bar"></div>
                 </div>
@@ -200,39 +208,37 @@
                 </div>
               </div>
               <div class="exp-item">
-                <span>JavaScript - <b>9/10</b></span>
-                <div class="progress">
-                  <div class="progress-bar"></div>
-                </div>
-              </div>
-              <div class="exp-item">
                 <span>Will to learn - <b>11/10</b></span>
                 <div class="progress">
                   <div class="progress-bar"></div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="experience" class="mt-md-5" data-aos="fade-left">
-          <div class="col-sm-12 p-0">
-            <h2>A bit of what I know</h2>
-            <p class="lead">
-              Hi. My name is Herman Karlsson and I'm 24 years old. I am
-              currently studying my last semester at Karlstad university, where
-              I'm studying web development. I've always enjoyed math and solving
-              problems, so programming is a perfect fit for me.
-            </p>
+            <div class="col-12 mt-4 text-md-center">
+              <p class="lead m-0">
+                I also feel confident programming in both
+                <span class="lang">C#</span> and <span class="lang">Java</span>,
+                while having some basic knowledge about Photoshop and UX design.
+                Over on my
+                <a
+                  href="https://www.linkedin.com/in/herman-karlsson-5478111a2/"
+                  target="_blank"
+                  >LinkedIn page</a
+                >
+                you can see the full list of courses that I took during my time
+                at Karlstad university.
+              </p>
+            </div>
           </div>
         </section>
         <section id="projects" class="mt-md-5" data-aos="fade-right">
           <h2>
             A few of my projects
           </h2>
-          <div class="row d-flex">
+          <div id="proj-container" class="row">
             <!-- 1st project -->
             <div
-              class="col-lg-4 col-md-6 align-items-center justify-content-center"
+              class="col-lg-4 col-md-6 align-items-center justify-content-center my-4"
             >
               <div class="single-project">
                 <div class="thumb">
@@ -242,7 +248,7 @@
                     alt=""
                   />
                 </div>
-                <div class="details d-flex flex-column">
+                <div class="details">
                   <h4>REST API calls - React</h4>
 
                   <p>
@@ -250,14 +256,19 @@
                     Axios to display data some data.
                   </p>
                   <div class="github">
-                    <i class="fab fa-github"></i>
-                    <a href="#" class="primary_btn2">View on Github</a>
+                    <div class="button_cont text-center">
+                      <a class="btn" href="add-website-here" target="_blank"
+                        ><i class="fab fa-github"></i>View on GitHub</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- 2nd project -->
-            <div class="col-lg-4 col-md-6">
+            <div
+              class="col-lg-4 col-md-6 align-items-center justify-content-center my-4"
+            >
               <div class="single-project">
                 <div class="thumb">
                   <img
@@ -274,14 +285,19 @@
                     where I created a navigation menu.
                   </p>
                   <div class="github">
-                    <i class="fab fa-github"></i>
-                    <a href="#" class="primary_btn2">View on Github</a>
+                    <div class="button_cont text-center">
+                      <a class="btn" href="add-website-here" target="_blank"
+                        ><i class="fab fa-github"></i>View on GitHub</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- 3rd project -->
-            <div class="col-lg-4 col-md-6">
+            <div
+              class="col-lg-4 col-md-6 align-items-center justify-content-center my-4"
+            >
               <div class="single-project">
                 <div class="thumb">
                   <img
@@ -294,15 +310,29 @@
                   <h4>Windows forms project - C#</h4>
                   <p>
                     A school assignment from the course "C#.NET II" at Malmö
-                    University.
+                    University, using Windows Forms.
                   </p>
                   <div class="github">
-                    <i class="fab fa-github"></i>
-                    <a href="#" class="primary_btn2">View on Github</a>
+                    <div class="button_cont text-center">
+                      <a class="btn" href="add-website-here" target="_blank"
+                        ><i class="fab fa-github"></i>View on GitHub</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="co-12 text-md-center my-4">
+            <p class="lead">
+              Although fairly basic, <span class="lang">this project</span> is
+              also available on
+              <a href="https://github.com/herkar95/Portfolio" target="_blank"
+                >GitHub</a
+              >
+              for anyone interested. It's built purely with HTML, CSS and a bit
+              of jQuery.
+            </p>
           </div>
         </section>
       </main>

@@ -42,6 +42,9 @@ h6 {
   font-family: 'Roboto', 'sans-serif';
   text-transform: uppercase;
 }
+#intro img {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+}
 #intro h6 {
   font-weight: lighter;
   color: var(--primary-orange);
@@ -102,7 +105,7 @@ button.navbar-toggler:hover {
 section {
   margin: 1rem 1rem;
   padding: 1rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ca5c20;
 }
 /* To make it easier to distinguish the different sections of the page */
 section:nth-child(odd) {
@@ -114,6 +117,15 @@ section:nth-child(even) {
 /* End of section - Page sections */
 
 /* Section - About */
+.progress {
+  border-radius: 100px;
+  align-items: center;
+  padding: 0 5px;
+  display: flex;
+  height: 10px;
+  width: 100%;
+  padding: 0;
+}
 .progress-bar {
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
@@ -130,18 +142,23 @@ section:nth-child(even) {
 }
 .exp-item {
   margin: 0.5rem 0;
+  padding: 0.5rem 0;
+}
+span.lang {
+  color: var(--primary-orange);
+  font-weight: bold;
 }
 /* HTML/CSS experience */
 .skills div.exp-item:nth-child(2) {
+  --progress-width: 70%;
+}
+/*  JavaScript experience */
+.skills div.exp-item:nth-child(3) {
   --progress-width: 80%;
 }
 /* Different JavaScript frameworks experience */
-.skills div.exp-item:nth-child(3) {
-  --progress-width: 60%;
-}
-/*  JavaScript experience */
 .skills div.exp-item:nth-child(4) {
-  --progress-width: 90%;
+  --progress-width: 60%;
 }
 /*  Will to learn */
 .skills div.exp-item:nth-child(5) {
@@ -159,6 +176,9 @@ section:nth-child(even) {
 /* End of section - About */
 
 /* Section - Projects */
+.github {
+  margin-top: 2rem;
+}
 #projects {
   border: none;
 }
@@ -173,11 +193,39 @@ section:nth-child(even) {
 }
 .thumb {
   overflow: hidden;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+  transition: all 0.2s ease;
 }
 #projects img {
   opacity: 0.9;
   transform: scale(1);
   transition: 0.4s ease-in-out;
+}
+#proj-container {
+  border-bottom: 1px solid #ca5c20;
+  padding-bottom: 1rem;
+}
+.btn {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--primary-orange);
+  display: inline-block;
+  border: none;
+}
+.btn:hover {
+  background: #ff8d29;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 0px 0px 1px black;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.btn:hover > i {
+  font-size: 3rem;
+  text-shadow: 0px 0px 2px black;
+}
+.btn > i {
+  margin-right: 0.5rem;
 }
 /* End of section - Projects */
 
@@ -187,6 +235,7 @@ section:nth-child(even) {
   width: 100%;
   margin: 0;
   background-color: var(--primary-darkgrey);
+  border: none;
 }
 .footer-copyright {
   color: white;
@@ -231,7 +280,7 @@ section:nth-child(even) {
 }
 @media screen and (max-width: 991px) {
   #projects > div > div:last-child {
-    margin: auto;
+    margin: 1rem auto;
     text-align: center;
   }
 }
@@ -241,15 +290,16 @@ section:nth-child(even) {
     transform: scale(1.1);
     opacity: 1;
   }
+  .thumb:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  }
 }
-/* End of section - Media queries  */
+/* on very small screens */
+@media screen and (max-width: 500px) {
+  section {
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+}
 
-.progress {
-  border-radius: 100px;
-  align-items: center;
-  padding: 0 5px;
-  display: flex;
-  height: 10px;
-  width: 100%;
-  padding: 0;
-}
+/* End of section - Media queries  */
