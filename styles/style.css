@@ -4,6 +4,8 @@
   --primary-darkgrey: #0c0b0b;
 
   --secondary-orange: #b45400;
+
+  --progress-width: 80%;
 }
 /* End of section - Global Variables */
 
@@ -46,7 +48,7 @@ h6 {
 }
 #intro-socials a {
   font-size: 2rem;
-  color: black;
+  color: var(--primary-darkgrey);
   margin: 0.2rem;
   transition: all 0.5s ease 0s;
 }
@@ -112,7 +114,48 @@ section:nth-child(even) {
 /* End of section - Page sections */
 
 /* Section - About */
-
+.progress-bar {
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background-image: -webkit-linear-gradient(0deg, #b9431e 0%, #ffa827 100%);
+  height: 30px;
+  width: 0;
+}
+.skills span {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.animate-progress {
+  animation: load-progress 2s normal forwards;
+}
+.exp-item {
+  margin: 0.5rem 0;
+}
+/* HTML/CSS experience */
+.skills div.exp-item:nth-child(2) {
+  --progress-width: 80%;
+}
+/* Different JavaScript frameworks experience */
+.skills div.exp-item:nth-child(3) {
+  --progress-width: 60%;
+}
+/*  JavaScript experience */
+.skills div.exp-item:nth-child(4) {
+  --progress-width: 90%;
+}
+/*  Will to learn */
+.skills div.exp-item:nth-child(5) {
+  --progress-width: 100%;
+}
+/* Fills up each progress bar */
+@keyframes load-progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
 /* End of section - About */
 
 /* Section - Projects */
@@ -200,3 +243,13 @@ section:nth-child(even) {
   }
 }
 /* End of section - Media queries  */
+
+.progress {
+  border-radius: 100px;
+  align-items: center;
+  padding: 0 5px;
+  display: flex;
+  height: 10px;
+  width: 100%;
+  padding: 0;
+}

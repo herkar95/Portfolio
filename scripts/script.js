@@ -5,13 +5,24 @@ jQuery(document).ready(function ($) {
     See HTML for source */
   AOS.init({
     duration: 1000,
-    once: true,
-    anchorPlacement: 'bottom-top',
-    offset: 250,
+    offset: 300,
   });
+
+  // Event handlers
+  $(document).on('aos:in', ({ detail }) => {
+    console.log('animated in', detail);
+    if (detail.id === 'about') {
+      $('.progress-bar').addClass('animate-progress');
+    }
+  });
+  $(document).on('aos:out', ({ detail }) => {
+    if (detail.id === 'about') {
+      $('.progress-bar').removeClass('animate-progress');
+    }
+  });
+  AOS.refresh();
   /* Places the navigation at the top or the bottom, depending on screen size. */
   onResize();
-  console.log($('#footer'));
   // Gets the current year. Used in footer for copyright
   let date = new Date();
   document.querySelector('#year').textContent = date.getFullYear();
@@ -89,7 +100,6 @@ function onScroll() {
 }
 /* Places the navigation at the top or the bottom, depending on screen size.*/
 function onResize() {
-  console.log($(window).width());
   if ($(window).width() < 751) {
     $('nav').removeClass('fixed-top');
     $('nav').addClass('fixed-bottom');
