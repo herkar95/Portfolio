@@ -24,7 +24,6 @@ main {
   margin-top: 6rem;
 }
 h2 {
-  font-family: 'Roboto', 'sans-serif';
   color: var(--primary-orange);
 }
 h4 {
@@ -39,7 +38,6 @@ h4 {
 }
 #intro h3,
 h6 {
-  font-family: 'Roboto', 'sans-serif';
   text-transform: uppercase;
 }
 #intro img {
