@@ -1,4 +1,5 @@
-/* Section - Global Variables */
+/* Section - Custom properties */
+
 :root {
   --primary-orange: #ff7700;
   --primary-darkgrey: #0c0b0b;
@@ -7,9 +8,11 @@
 
   --progress-width: 80%;
 }
-/* End of section - Global Variables */
+
+/* End of section - Custom properties */
 
 /* Section - General */
+
 * {
   font-family: 'Lato';
 }
@@ -29,9 +32,11 @@ h2 {
 h4 {
   font-size: 1.3rem;
 }
+
 /* End of section - General */
 
 /* Section - Introduction */
+
 #intro ul > li > i {
   margin-right: 0.5rem;
   color: var(--primary-orange);
@@ -55,9 +60,11 @@ h6 {
 #intro-socials a:hover {
   color: var(--primary-orange);
 }
+
 /* End of section - Introduction */
 
 /* Section - Navigation Menu */
+
 .nav-item {
   color: black;
   font-weight: bold;
@@ -96,11 +103,13 @@ button.navbar-toggler:hover {
   font-weight: 400;
   padding: 1rem;
 }
+
 /* End of section - Navigation Menu */
 
 /* Section - Page sections */
+
 section {
-  margin: 1rem 1rem;
+  margin: 3rem 0;
   padding: 1rem;
   border-bottom: 1px solid #ca5c20;
 }
@@ -111,9 +120,11 @@ section:nth-child(odd) {
 section:nth-child(even) {
   background-color: #e8e8e83b;
 }
+
 /* End of section - Page sections */
 
 /* Section - About */
+
 .progress {
   border-radius: 100px;
   align-items: center;
@@ -147,7 +158,7 @@ span.lang {
 }
 /* HTML/CSS experience */
 .skills div.exp-item:nth-child(2) {
-  --progress-width: 70%;
+  --progress-width: 80%;
 }
 /*  JavaScript experience */
 .skills div.exp-item:nth-child(3) {
@@ -163,16 +174,18 @@ span.lang {
 }
 /* Fills up each progress bar */
 @keyframes load-progress {
-  0% {
+  from {
     width: 0;
   }
-  100% {
+  to {
     width: var(--progress-width);
   }
 }
+
 /* End of section - About */
 
 /* Section - Projects */
+
 .github {
   margin-top: 2rem;
 }
@@ -191,12 +204,17 @@ span.lang {
 .thumb {
   overflow: hidden;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 #projects img {
   opacity: 0.9;
+  cursor: pointer;
   transform: scale(1);
   transition: 0.4s ease-in-out;
+}
+#projects img:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 #proj-container {
   border-bottom: 1px solid #ca5c20;
@@ -224,9 +242,11 @@ span.lang {
 .btn > i {
   margin-right: 0.5rem;
 }
+
 /* End of section - Projects */
 
 /* Section - Footer */
+
 #footer {
   padding: 40px 0;
   width: 100%;
@@ -263,39 +283,22 @@ span.lang {
 /* End of section - Footer */
 
 /* Section - Media queries  */
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 768px) {
   #projects {
     text-align: center;
-    padding-bottom: 100px;
   }
   #projects img {
     opacity: 1;
   }
+  #projects img:hover {
+    transform: none;
+  }
   .container {
     max-width: 100%;
   }
-}
-@media screen and (max-width: 991px) {
-  #projects > div > div:last-child {
-    margin: 1rem auto;
-    text-align: center;
-  }
-}
-/* on medium and bigger screens */
-@media screen and (min-width: 768px) {
-  #projects img:hover {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  .thumb:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-  }
-}
-/* on very small screens */
-@media screen and (max-width: 500px) {
   section {
     margin: 1rem 0;
-    padding: 1rem 0;
   }
 }
 

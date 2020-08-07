@@ -10,7 +10,6 @@ jQuery(document).ready(function ($) {
 
   // Event handlers
   $(document).on('aos:in', ({ detail }) => {
-    console.log('animated in', detail);
     if (detail.id === 'about') {
       $('.progress-bar').addClass('animate-progress');
     }
